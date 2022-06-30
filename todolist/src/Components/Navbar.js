@@ -1,6 +1,10 @@
 import React from "react";
 
 function Navbar() {
+
+  const displayAbout = ()=>{
+
+  }
   return (
     <>
       <div className="container " >
@@ -28,7 +32,7 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/aboutus">
+                <a className="nav-link" href="/aboutus" onClick={()=>{displayAbout()}}>
                   About Us
                 </a>
               </li>
