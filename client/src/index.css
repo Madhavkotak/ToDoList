@@ -1,0 +1,163 @@
+
+
+body {
+  /* background-image: radial-gradient(#f70776, rgb(35, 35, 236));
+  background-repeat: no-repeat;  */
+  /* border: 5px solid orange; */
+  background-color:rgba(0, 0, 0, 0.495) ;
+ 
+  margin: 0;
+  /* height: 100vh;
+  width: 100vw; */
+  font-family: "Helvetica Neue", Helvetica, Arial;
+
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+}
+
+.name {
+  position: absolute;
+  width: 40%;
+  text-align: center;
+
+  margin: auto;
+  padding: 10px;
+  height: auto;
+
+
+  /* position: relative; */
+  background-color: cadetblue;
+  border-radius: 16px;
+  margin: 30%;
+  margin-top: 10%;
+
+
+}
+
+.input {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin: 0;
+
+
+}
+
+#askname {
+  margin: 0;
+
+  width: 40%;
+  height: 30px;
+  padding: 7px;
+  font-size: 20px;
+  text-align: center;
+  border: 0px;
+  border-radius: 16px;
+  color: rgb(33, 66, 157);
+}
+
+#add {
+  height: 50px;
+  width: 40%;
+  border: 0;
+  border-radius: 16px;
+  color: darkblue;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+#add:hover {
+  background-color: rgb(186, 96, 28);
+
+}
+
+
+
+
+.entername {
+  color: rgb(29, 112, 228);
+  height: 100px;
+
+}
+
+.main {
+  /* border: 10px solid white; */
+  width: 100vw;
+  padding: 20px;
+  width: 400px;
+}
+
+.greet {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding: 20px;
+}
+
+.additem {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding: 20px;
+  padding-bottom: 50px;
+  /* border: 5px solid black; */
+
+  margin-bottom : 20px;
+
+}
+
+#addtask {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+  width: 20%;
+  text-align: center;
+  border: 0px;
+  border-radius: 16px;
+  color: rgb(33, 66, 157);
+}
+
+#newtask {
+  margin-bottom: 20px;
+  padding: 10px;
+  width:50%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: 0px;
+  border-radius: 16px;
+  color: rgb(33, 66, 157);
+}
+
+.label-2 {
+
+
+
+  color: white;
+  font-size: 25px;
+
+}
+
+.list {
+  /* position: absolute; */
+  width: auto;
+  height: fit-content;
+  /* border: 5px solid pink; */
+  text-align: center;
+ 
+  align-items: center;
+}
+.coll{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listitem{
+  width: 90%;
+  display: inline;
+  background-color: white;
+  /* border: 10px solide black; */
+}

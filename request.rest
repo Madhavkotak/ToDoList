@@ -1,0 +1,25 @@
+# show list
+POST http://localhost:5000/list 
+Content-Type: application/json
+
+{
+    "name": "vrati"
+}
+
+
+
+###
+# add an item
+POST http://localhost:5000/newitem
+Content-Type: application/json
+
+{
+    "name": "person 1",
+    "list":"task 1"
+}
+
+###c
+#remove an item
+DELETE http://localhost:5000/delete/62cb06d74b2ae571ae1f9d36
+
+
