@@ -1,9 +1,10 @@
 # show list
-POST http://localhost:5000/list 
+# POST http://localhost:5000/list   
+POST https://to-do-list-madhav-kotak.herokuapp.com/list 
 Content-Type: application/json
 
 {
-    "name": "vrati"
+    "name": "Priyank"
 }
 
 

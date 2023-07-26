@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ListItem from "./ListItem"
+import ListItem from "./ListItem";
 function App() {
   console.log("rendered");
   const [name, setName] = useState("");
@@ -8,7 +8,7 @@ function App() {
   //delete item from list
   const deletebyid = (id) => {
     fetch(`https://to-do-list-madhav-kotak.herokuapp.com/delete/${id}`, {
-    // fetch(`http://localhost:5000/delete/${id}`, {
+      // fetch(`http://localhost:5000/delete/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -78,6 +78,14 @@ function App() {
     getdata(name);
   };
 
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log("Name: " + profile.getName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+
   // delete item button
   const handledelete = (id) => {
     deletebyid(id);
@@ -93,7 +101,7 @@ function App() {
   return (
     <div className="App">
       {/* asking name  */}
-      <div
+      {/* <div
         style={{ display: name === "" ? "inline" : "none" }}
         className="name"
       >
@@ -111,9 +119,15 @@ function App() {
             Enter{" "}
           </button>
         </div>
-      </div>
+      </div> */}
 
+      <div
+        style={{ display: name === "" ? "inline" : "none" }}
+        class="g-signin2"
+        data-onsuccess="onSignIn"
+      ></div>
       {/* body */}
+
       <div
         className="main"
         style={{ display: name === "" ? "none" : "inline" }}
@@ -138,19 +152,26 @@ function App() {
         {/* displaying list */}
         <div className="list">
           <div className="label-2">Your List</div>
-         <div className="coll"> {curlist.map((item) => {
-            return (
+          <div className="coll">
+            {" "}
+            {curlist.map((item) => {
+              return (
+                <ListItem
+                  key={item.list}
+                  text={item.list}
+                  id={item._id}
+                  deletefunc={handledelete}
+                />
+                // <><div className="listitem">
+                // <h1  key={item._id}>{item.list}</h1>
 
-              <ListItem key = {item.list} text = {item.list} id = {item._id} deletefunc = {handledelete}/>
-              // <><div className="listitem">
-              // <h1  key={item._id}>{item.list}</h1>
-
-              // <button id="delete" onClick={() => handledelete(item._id)}>
-              //   Delete this{" "}
-              // </button></div>
-              // </>
-            );
-          })}</div>
+                // <button id="delete" onClick={() => handledelete(item._id)}>
+                //   Delete this{" "}
+                // </button></div>
+                // </>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
