@@ -17,8 +17,8 @@ app.use(express.json());
 mongoose
 
   .connect(
-    "mongodb+srv://MadhavKotak:tN7gAyTY8JyXa0EX@todo.d8wtvoh.mongodb.net/TodoList",
-    // "mongodb://localhost:27017",
+    
+     "mongodb://localhost:27017",
     { 
       useNewUrlParser: true,
       useUnifiedTopology: true,
